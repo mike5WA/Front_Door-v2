@@ -1,1 +1,717 @@
-[]
+[
+    {
+        "id": "c2f74828919a13f6",
+        "type": "tab",
+        "label": "Weather Data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f00e620a11f9efaa",
+        "type": "mqtt-broker",
+        "name": "Confirm",
+        "broker": "10.10.0.5",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9ae652e11f50b5d1",
+        "type": "ui_group",
+        "name": "Weather",
+        "tab": "92ce010872de559d",
+        "order": 1,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "92ce010872de559d",
+        "type": "ui_tab",
+        "name": "Guages",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "349c87ac52becf82",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "true",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "db2269f75bf51f6e",
+        "type": "ui_group",
+        "name": "Wind",
+        "tab": "92ce010872de559d",
+        "order": 2,
+        "disp": true,
+        "width": 13,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d7ea5811a8804934",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "9ae652e11f50b5d1",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "22cc759041f60c99",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "9ae652e11f50b5d1",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "d17ce647e25ab497",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "9ae652e11f50b5d1",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a1c01d9c722efe85",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "9ae652e11f50b5d1",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8f4110e67d2bd36f",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "9ae652e11f50b5d1",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e610a98aa5b5c6f5",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "db2269f75bf51f6e",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "544599ea1e7f5fa3",
+        "type": "debug",
+        "z": "c2f74828919a13f6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "26a753d090395702",
+        "type": "inject",
+        "z": "c2f74828919a13f6",
+        "name": "DataOK",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "DataOK",
+        "payload": "Data OK",
+        "payloadType": "str",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "1e3fcd6f82cc6490"
+            ]
+        ]
+    },
+    {
+        "id": "8c8b773a157324c5",
+        "type": "mqtt in",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "topic": "WeatherData",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "f00e620a11f9efaa",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "544599ea1e7f5fa3",
+                "802d41e8482c3e31",
+                "677c6f0ab58f3c69",
+                "d4dc2b6bbe326837",
+                "4aa18319b388a34e",
+                "353165b391a47ff3",
+                "6cc2a7fa20ed89ac"
+            ]
+        ]
+    },
+    {
+        "id": "1e3fcd6f82cc6490",
+        "type": "mqtt out",
+        "z": "c2f74828919a13f6",
+        "name": "Confirm",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f00e620a11f9efaa",
+        "x": 400,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ce15415360a272c3",
+        "type": "debug",
+        "z": "c2f74828919a13f6",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f9730996b8c091c4",
+        "type": "debug",
+        "z": "c2f74828919a13f6",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6e08a1de1187917c",
+        "type": "inject",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"Humidity\":66,\"windSpeed\":\"11.9\",\"UV\":5,\"windDir\":\"South-southwest\",\"Temp\":24.6}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "802d41e8482c3e31",
+                "353165b391a47ff3",
+                "6cc2a7fa20ed89ac",
+                "677c6f0ab58f3c69"
+            ]
+        ]
+    },
+    {
+        "id": "5470965fa774f886",
+        "type": "debug",
+        "z": "c2f74828919a13f6",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "802d41e8482c3e31",
+        "type": "change",
+        "z": "c2f74828919a13f6",
+        "name": "Temp",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.Temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "4d67758e2aae0953"
+            ]
+        ]
+    },
+    {
+        "id": "353165b391a47ff3",
+        "type": "change",
+        "z": "c2f74828919a13f6",
+        "name": "WindSpeed",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.windSpeed",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "ce15415360a272c3",
+                "7ce94d8a54fdeee8"
+            ]
+        ]
+    },
+    {
+        "id": "6cc2a7fa20ed89ac",
+        "type": "change",
+        "z": "c2f74828919a13f6",
+        "name": "WindDir",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.windDir",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "ce15415360a272c3",
+                "98f28e54f583851b"
+            ]
+        ]
+    },
+    {
+        "id": "677c6f0ab58f3c69",
+        "type": "change",
+        "z": "c2f74828919a13f6",
+        "name": "HPA",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.Hpa",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "3d778de35c6e305d"
+            ]
+        ]
+    },
+    {
+        "id": "d4dc2b6bbe326837",
+        "type": "change",
+        "z": "c2f74828919a13f6",
+        "name": "Humidity",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.Humidity",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "9a78949d469d979e"
+            ]
+        ]
+    },
+    {
+        "id": "4aa18319b388a34e",
+        "type": "change",
+        "z": "c2f74828919a13f6",
+        "name": "UV",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.UV",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "ce15415360a272c3",
+                "1f74c977d5a0a42a"
+            ]
+        ]
+    },
+    {
+        "id": "4d67758e2aae0953",
+        "type": "ui_gauge",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "9ae652e11f50b5d1",
+        "order": 1,
+        "width": 6,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Temp",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3d778de35c6e305d",
+        "type": "ui_gauge",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "9ae652e11f50b5d1",
+        "order": 2,
+        "width": 6,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Hpa",
+        "label": "Hpa",
+        "format": "{{value}}",
+        "min": "900",
+        "max": "1200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9a78949d469d979e",
+        "type": "ui_gauge",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "9ae652e11f50b5d1",
+        "order": 3,
+        "width": 6,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1f74c977d5a0a42a",
+        "type": "ui_gauge",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "9ae652e11f50b5d1",
+        "order": 4,
+        "width": 5,
+        "height": 5,
+        "gtype": "gage",
+        "title": "UV",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7ce94d8a54fdeee8",
+        "type": "ui_text",
+        "z": "c2f74828919a13f6",
+        "group": "db2269f75bf51f6e",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Wind Speed km/hr",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 730,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "98f28e54f583851b",
+        "type": "ui_text",
+        "z": "c2f74828919a13f6",
+        "group": "db2269f75bf51f6e",
+        "order": 3,
+        "width": 7,
+        "height": 1,
+        "name": "",
+        "label": "From",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 690,
+        "y": 320,
+        "wires": []
+    }
+]
