@@ -41,18 +41,18 @@
     {
         "id": "9ae652e11f50b5d1",
         "type": "ui_group",
-        "name": "Weather",
+        "name": "Guages",
         "tab": "92ce010872de559d",
         "order": 1,
         "disp": true,
-        "width": 24,
+        "width": "20",
         "collapse": false,
         "className": ""
     },
     {
         "id": "92ce010872de559d",
         "type": "ui_tab",
-        "name": "Guages",
+        "name": "Weather",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -161,69 +161,20 @@
         "tab": "92ce010872de559d",
         "order": 2,
         "disp": true,
-        "width": "19",
+        "width": 12,
         "collapse": false,
         "className": ""
     },
     {
-        "id": "d7ea5811a8804934",
-        "type": "ui_spacer",
-        "z": "c2f74828919a13f6",
-        "name": "spacer",
-        "group": "9ae652e11f50b5d1",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "22cc759041f60c99",
-        "type": "ui_spacer",
-        "z": "c2f74828919a13f6",
-        "name": "spacer",
-        "group": "9ae652e11f50b5d1",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "d17ce647e25ab497",
-        "type": "ui_spacer",
-        "z": "c2f74828919a13f6",
-        "name": "spacer",
-        "group": "9ae652e11f50b5d1",
-        "order": 7,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "a1c01d9c722efe85",
-        "type": "ui_spacer",
-        "z": "c2f74828919a13f6",
-        "name": "spacer",
-        "group": "9ae652e11f50b5d1",
-        "order": 8,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "8f4110e67d2bd36f",
-        "type": "ui_spacer",
-        "z": "c2f74828919a13f6",
-        "name": "spacer",
-        "group": "9ae652e11f50b5d1",
-        "order": 9,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "e610a98aa5b5c6f5",
-        "type": "ui_spacer",
-        "z": "c2f74828919a13f6",
-        "name": "spacer",
-        "group": "db2269f75bf51f6e",
-        "order": 2,
-        "width": 1,
-        "height": 1
+        "id": "4a982ff0d7f2d5b9",
+        "type": "ui_group",
+        "name": "Rainfall",
+        "tab": "92ce010872de559d",
+        "order": 3,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "544599ea1e7f5fa3",
@@ -238,7 +189,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 140,
+        "x": 160,
         "y": 280,
         "wires": []
     },
@@ -293,7 +244,8 @@
                 "677c6f0ab58f3c69",
                 "d4dc2b6bbe326837",
                 "4aa18319b388a34e",
-                "5db59bafbced7ccf"
+                "5db59bafbced7ccf",
+                "4397436e0f161712"
             ]
         ]
     },
@@ -430,24 +382,24 @@
         "name": "",
         "group": "9ae652e11f50b5d1",
         "order": 1,
-        "width": 6,
+        "width": 5,
         "height": 5,
         "gtype": "gage",
         "title": "Temp",
         "label": "C",
         "format": "{{value}}",
-        "min": 0,
+        "min": "-5",
         "max": "50",
         "colors": [
-            "#00b500",
-            "#e6e600",
+            "#5771f4",
+            "#1cc438",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "17",
+        "seg2": "33",
         "diff": false,
         "className": "",
-        "x": 610,
+        "x": 570,
         "y": 120,
         "wires": []
     },
@@ -458,24 +410,24 @@
         "name": "",
         "group": "9ae652e11f50b5d1",
         "order": 2,
-        "width": 6,
+        "width": 5,
         "height": 5,
         "gtype": "gage",
         "title": "Hpa",
         "label": "Hpa",
         "format": "{{value}}",
-        "min": "900",
+        "min": "850",
         "max": "1200",
         "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
+            "#00b3b0",
+            "#00e67a",
+            "#d7658d"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "975",
+        "seg2": "1100",
         "diff": false,
         "className": "",
-        "x": 610,
+        "x": 570,
         "y": 160,
         "wires": []
     },
@@ -486,7 +438,7 @@
         "name": "",
         "group": "9ae652e11f50b5d1",
         "order": 3,
-        "width": 6,
+        "width": 5,
         "height": 5,
         "gtype": "gage",
         "title": "Humidity",
@@ -495,15 +447,15 @@
         "min": 0,
         "max": "100",
         "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
+            "#e39426",
+            "#00e60f",
+            "#5f49d0"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "30",
+        "seg2": "65",
         "diff": false,
         "className": "",
-        "x": 620,
+        "x": 580,
         "y": 200,
         "wires": []
     },
@@ -521,17 +473,17 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": 10,
+        "max": "11",
         "colors": [
             "#00b500",
-            "#e6e600",
+            "#e1f00a",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "3",
+        "seg2": "8",
         "diff": false,
         "className": "",
-        "x": 610,
+        "x": 570,
         "y": 240,
         "wires": []
     },
@@ -541,7 +493,7 @@
         "z": "c2f74828919a13f6",
         "group": "db2269f75bf51f6e",
         "order": 1,
-        "width": "19",
+        "width": 12,
         "height": 1,
         "name": "Wind Data",
         "label": "",
@@ -552,7 +504,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
+        "x": 590,
         "y": 280,
         "wires": []
     },
@@ -571,22 +523,22 @@
         "type": "debug",
         "z": "c2f74828919a13f6",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
-        "y": 340,
+        "x": 480,
+        "y": 380,
         "wires": []
     },
     {
         "id": "5db59bafbced7ccf",
         "type": "function",
         "z": "c2f74828919a13f6",
-        "name": "function 2",
+        "name": "Wind",
         "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\nvar mywindDir = msg.payload.windDir;\nvar mywindGust = msg.payload.MaxWindGust;\nwindData = \"Current speed = \"+ mywindSpeed +\" km/hr \" + \"from \" + mywindDir + \" :  Max gust today of \" + mywindGust + \" km/hr\";\nmsg.payload = windData;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -594,13 +546,54 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
+        "x": 370,
         "y": 280,
         "wires": [
             [
-                "88054fd6de5e543d",
                 "7ce94d8a54fdeee8"
             ]
         ]
+    },
+    {
+        "id": "4397436e0f161712",
+        "type": "function",
+        "z": "c2f74828919a13f6",
+        "name": "Rain",
+        "func": "var rainData = \"\";\nvar myrainToday = msg.payload.rainToday;\nvar myrainMonth = msg.payload.rainMonth;\nvar myrainYear = msg.payload.rainYear;\nrainData = \"Rainfall today = \"+ myrainToday +\" mm \" + \"Month \" + myrainMonth + \" mm \" + \" Year \" + myrainYear + \" mm\";\nmsg.payload = rainData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "88054fd6de5e543d",
+                "1ab1137d51733e8f"
+            ]
+        ]
+    },
+    {
+        "id": "1ab1137d51733e8f",
+        "type": "ui_text",
+        "z": "c2f74828919a13f6",
+        "group": "4a982ff0d7f2d5b9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Rain Data",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 580,
+        "y": 320,
+        "wires": []
     }
 ]
