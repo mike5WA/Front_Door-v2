@@ -161,7 +161,7 @@
         "tab": "92ce010872de559d",
         "order": 2,
         "disp": true,
-        "width": 13,
+        "width": "19",
         "collapse": false,
         "className": ""
     },
@@ -230,15 +230,16 @@
         "type": "debug",
         "z": "c2f74828919a13f6",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 40,
+        "x": 140,
+        "y": 280,
         "wires": []
     },
     {
@@ -263,7 +264,7 @@
         "payload": "Data OK",
         "payloadType": "str",
         "x": 170,
-        "y": 560,
+        "y": 460,
         "wires": [
             [
                 "1e3fcd6f82cc6490"
@@ -283,8 +284,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 170,
-        "y": 60,
+        "x": 130,
+        "y": 200,
         "wires": [
             [
                 "544599ea1e7f5fa3",
@@ -292,8 +293,7 @@
                 "677c6f0ab58f3c69",
                 "d4dc2b6bbe326837",
                 "4aa18319b388a34e",
-                "353165b391a47ff3",
-                "6cc2a7fa20ed89ac"
+                "5db59bafbced7ccf"
             ]
         ]
     },
@@ -312,87 +312,7 @@
         "expiry": "",
         "broker": "f00e620a11f9efaa",
         "x": 400,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "ce15415360a272c3",
-        "type": "debug",
-        "z": "c2f74828919a13f6",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "f9730996b8c091c4",
-        "type": "debug",
-        "z": "c2f74828919a13f6",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "6e08a1de1187917c",
-        "type": "inject",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"Humidity\":66,\"windSpeed\":\"11.9\",\"UV\":5,\"windDir\":\"South-southwest\",\"Temp\":24.6}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 160,
-        "wires": [
-            [
-                "802d41e8482c3e31",
-                "353165b391a47ff3",
-                "6cc2a7fa20ed89ac",
-                "677c6f0ab58f3c69"
-            ]
-        ]
-    },
-    {
-        "id": "5470965fa774f886",
-        "type": "debug",
-        "z": "c2f74828919a13f6",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 480,
+        "y": 460,
         "wires": []
     },
     {
@@ -414,67 +334,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 370,
         "y": 120,
         "wires": [
             [
                 "4d67758e2aae0953"
-            ]
-        ]
-    },
-    {
-        "id": "353165b391a47ff3",
-        "type": "change",
-        "z": "c2f74828919a13f6",
-        "name": "WindSpeed",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.windSpeed",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
-        "y": 280,
-        "wires": [
-            [
-                "ce15415360a272c3",
-                "7ce94d8a54fdeee8"
-            ]
-        ]
-    },
-    {
-        "id": "6cc2a7fa20ed89ac",
-        "type": "change",
-        "z": "c2f74828919a13f6",
-        "name": "WindDir",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.windDir",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 320,
-        "wires": [
-            [
-                "ce15415360a272c3",
-                "98f28e54f583851b"
             ]
         ]
     },
@@ -497,7 +361,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 370,
         "y": 160,
         "wires": [
             [
@@ -555,7 +419,6 @@
         "y": 240,
         "wires": [
             [
-                "ce15415360a272c3",
                 "1f74c977d5a0a42a"
             ]
         ]
@@ -584,8 +447,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 630,
-        "y": 100,
+        "x": 610,
+        "y": 120,
         "wires": []
     },
     {
@@ -612,8 +475,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 630,
-        "y": 140,
+        "x": 610,
+        "y": 160,
         "wires": []
     },
     {
@@ -640,8 +503,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 640,
-        "y": 180,
+        "x": 620,
+        "y": 200,
         "wires": []
     },
     {
@@ -668,8 +531,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 630,
-        "y": 220,
+        "x": 610,
+        "y": 240,
         "wires": []
     },
     {
@@ -678,10 +541,10 @@
         "z": "c2f74828919a13f6",
         "group": "db2269f75bf51f6e",
         "order": 1,
-        "width": 5,
+        "width": "19",
         "height": 1,
-        "name": "",
-        "label": "Wind Speed km/hr",
+        "name": "Wind Data",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -689,29 +552,55 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 730,
-        "y": 260,
+        "x": 610,
+        "y": 280,
         "wires": []
     },
     {
-        "id": "98f28e54f583851b",
-        "type": "ui_text",
+        "id": "e8005298fedbec7a",
+        "type": "comment",
         "z": "c2f74828919a13f6",
-        "group": "db2269f75bf51f6e",
-        "order": 3,
-        "width": 7,
-        "height": 1,
         "name": "",
-        "label": "From",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 690,
-        "y": 320,
+        "info": "Data is taken from HASS and passed via MQTT\nTopic WeatherData\nChange nodes convert msg.payload object to individual payloads\nPayloads passed to graphs etc",
+        "x": 140,
+        "y": 60,
         "wires": []
+    },
+    {
+        "id": "88054fd6de5e543d",
+        "type": "debug",
+        "z": "c2f74828919a13f6",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5db59bafbced7ccf",
+        "type": "function",
+        "z": "c2f74828919a13f6",
+        "name": "function 2",
+        "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\nvar mywindDir = msg.payload.windDir;\nvar mywindGust = msg.payload.MaxWindGust;\nwindData = \"Current speed = \"+ mywindSpeed +\" km/hr \" + \"from \" + mywindDir + \" :  Max gust today of \" + mywindGust + \" km/hr\";\nmsg.payload = windData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "88054fd6de5e543d",
+                "7ce94d8a54fdeee8"
+            ]
+        ]
     }
 ]
