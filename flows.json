@@ -51,7 +51,7 @@
         "type": "ui_group",
         "name": "Guages",
         "tab": "92ce010872de559d",
-        "order": 1,
+        "order": 2,
         "disp": false,
         "width": "16",
         "collapse": false,
@@ -79,7 +79,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#0f0d8c",
+                "baseColor": "#e1d019",
                 "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
                 "edited": true,
                 "reset": false
@@ -93,11 +93,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#097479",
-                    "value": "#0f0d8c",
+                    "value": "#e1d019",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0f0d8c",
+                    "value": "#e1d019",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -105,11 +105,11 @@
                     "edited": false
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#333333",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#1714d2",
+                    "value": "#ede05a",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -125,7 +125,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0f0d8c",
+                    "value": "#e1d019",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -146,7 +146,7 @@
         },
         "site": {
             "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
+            "hideToolbar": "true",
             "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
@@ -168,7 +168,7 @@
         "type": "ui_group",
         "name": "Wind",
         "tab": "92ce010872de559d",
-        "order": 2,
+        "order": 3,
         "disp": true,
         "width": "16",
         "collapse": false,
@@ -179,7 +179,7 @@
         "type": "ui_group",
         "name": "Rainfall",
         "tab": "92ce010872de559d",
-        "order": 3,
+        "order": 4,
         "disp": true,
         "width": "16",
         "collapse": false,
@@ -215,6 +215,17 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "15db134b92603311",
+        "type": "ui_group",
+        "name": "Time",
+        "tab": "92ce010872de559d",
+        "order": 1,
+        "disp": false,
+        "width": "16",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "544599ea1e7f5fa3",
@@ -406,7 +417,7 @@
         "colors": [
             "#5771f4",
             "#0c8320",
-            "#ca3838"
+            "#ad2525"
         ],
         "seg1": "15",
         "seg2": "30",
@@ -527,8 +538,8 @@
         "z": "c2f74828919a13f6",
         "name": "",
         "info": "Data is taken from HASS and passed via MQTT\nTopic WeatherData\nChange nodes convert msg.payload object to individual payloads\nPayloads passed to graphs etc",
-        "x": 140,
-        "y": 60,
+        "x": 80,
+        "y": 40,
         "wires": []
     },
     {
@@ -633,6 +644,48 @@
                 "5db59bafbced7ccf",
                 "4397436e0f161712",
                 "544599ea1e7f5fa3"
+            ]
+        ]
+    },
+    {
+        "id": "26ea9dcf15635104",
+        "type": "ui_digital_clock",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "15db134b92603311",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "x": 590,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3f644230f578410c",
+        "type": "inject",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 60,
+        "wires": [
+            [
+                "26ea9dcf15635104"
             ]
         ]
     },
