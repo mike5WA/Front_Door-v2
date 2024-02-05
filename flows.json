@@ -1,88 +1,20 @@
 [
     {
-        "id": "c2f74828919a13f6",
-        "type": "tab",
-        "label": "Weather Data",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "04e8c216e556b4f3",
-        "type": "tab",
-        "label": "Doorbell",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "f00e620a11f9efaa",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "10.10.0.5",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
-        "id": "9ae652e11f50b5d1",
-        "type": "ui_group",
-        "name": "Guages",
-        "tab": "92ce010872de559d",
-        "order": 1,
-        "disp": true,
-        "width": 16,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "92ce010872de559d",
-        "type": "ui_tab",
-        "name": "Weather",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "349c87ac52becf82",
+        "id": "6bf09d6e56cdb4a8",
         "type": "ui_base",
         "theme": {
-            "name": "theme-dark",
+            "name": "theme-light",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
+                "edited": false
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#15e1e5",
+                "baseColor": "#097479",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
+                "edited": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -92,16 +24,16 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#097479",
-                    "value": "#15e1e5",
-                    "edited": true
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#15e1e5",
+                    "value": "#0094CE",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#111111",
+                    "value": "#fafafa",
                     "edited": false
                 },
                 "page-sidebar-backgroundColor": {
@@ -109,27 +41,27 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#57edf0",
+                    "value": "#1bbfff",
                     "edited": false
                 },
                 "group-borderColor": {
-                    "value": "#555555",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "group-backgroundColor": {
-                    "value": "#333333",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "widget-textColor": {
-                    "value": "#eeeeee",
+                    "value": "#111111",
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#15e1e5",
+                    "value": "#0094ce",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#333333",
+                    "value": "#ffffff",
                     "edited": false
                 },
                 "base-font": {
@@ -162,541 +94,5 @@
                 "py": 0
             }
         }
-    },
-    {
-        "id": "4a982ff0d7f2d5b9",
-        "type": "ui_group",
-        "name": "Rainfall",
-        "tab": "92ce010872de559d",
-        "order": 3,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "544599ea1e7f5fa3",
-        "type": "debug",
-        "z": "c2f74828919a13f6",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 160,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "26a753d090395702",
-        "type": "inject",
-        "z": "c2f74828919a13f6",
-        "name": "DataOK",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "DataOK",
-        "payload": "Data OK",
-        "payloadType": "str",
-        "x": 170,
-        "y": 460,
-        "wires": [
-            [
-                "1e3fcd6f82cc6490"
-            ]
-        ]
-    },
-    {
-        "id": "1e3fcd6f82cc6490",
-        "type": "mqtt out",
-        "z": "c2f74828919a13f6",
-        "name": "Confirm",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f00e620a11f9efaa",
-        "x": 400,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "802d41e8482c3e31",
-        "type": "change",
-        "z": "c2f74828919a13f6",
-        "name": "Temp",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.Temp",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
-        "y": 120,
-        "wires": [
-            [
-                "4d67758e2aae0953"
-            ]
-        ]
-    },
-    {
-        "id": "677c6f0ab58f3c69",
-        "type": "change",
-        "z": "c2f74828919a13f6",
-        "name": "HPA",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.Hpa",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
-        "y": 160,
-        "wires": [
-            [
-                "3d778de35c6e305d"
-            ]
-        ]
-    },
-    {
-        "id": "d4dc2b6bbe326837",
-        "type": "change",
-        "z": "c2f74828919a13f6",
-        "name": "Humidity",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.Humidity",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 380,
-        "y": 200,
-        "wires": [
-            [
-                "9a78949d469d979e"
-            ]
-        ]
-    },
-    {
-        "id": "4aa18319b388a34e",
-        "type": "change",
-        "z": "c2f74828919a13f6",
-        "name": "UV",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.UV",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 370,
-        "y": 240,
-        "wires": [
-            [
-                "1f74c977d5a0a42a"
-            ]
-        ]
-    },
-    {
-        "id": "4d67758e2aae0953",
-        "type": "ui_gauge",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "group": "9ae652e11f50b5d1",
-        "order": 1,
-        "width": 4,
-        "height": 4,
-        "gtype": "gage",
-        "title": "Temp",
-        "label": "C",
-        "format": "{{value}}",
-        "min": "-5",
-        "max": "50",
-        "colors": [
-            "#5771f4",
-            "#1cc438",
-            "#ca3838"
-        ],
-        "seg1": "15",
-        "seg2": "30",
-        "diff": false,
-        "className": "",
-        "x": 570,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "3d778de35c6e305d",
-        "type": "ui_gauge",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "group": "9ae652e11f50b5d1",
-        "order": 2,
-        "width": 4,
-        "height": 4,
-        "gtype": "gage",
-        "title": "Hpa",
-        "label": "Hpa",
-        "format": "{{value}}",
-        "min": "975",
-        "max": "1050",
-        "colors": [
-            "#00b3b0",
-            "#00e67a",
-            "#d7658d"
-        ],
-        "seg1": "1000",
-        "seg2": "1030",
-        "diff": false,
-        "className": "",
-        "x": 570,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "9a78949d469d979e",
-        "type": "ui_gauge",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "group": "9ae652e11f50b5d1",
-        "order": 3,
-        "width": 4,
-        "height": 4,
-        "gtype": "gage",
-        "title": "Humidity",
-        "label": "%",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#e39426",
-            "#00e60f",
-            "#5f49d0"
-        ],
-        "seg1": "30",
-        "seg2": "65",
-        "diff": false,
-        "className": "",
-        "x": 580,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "1f74c977d5a0a42a",
-        "type": "ui_gauge",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "group": "9ae652e11f50b5d1",
-        "order": 4,
-        "width": 4,
-        "height": 4,
-        "gtype": "gage",
-        "title": "UV",
-        "label": "",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "11",
-        "colors": [
-            "#00b500",
-            "#e1f00a",
-            "#ca3838"
-        ],
-        "seg1": "3",
-        "seg2": "8",
-        "diff": false,
-        "className": "",
-        "x": 570,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "7ce94d8a54fdeee8",
-        "type": "ui_text",
-        "z": "c2f74828919a13f6",
-        "group": "db2269f75bf51f6e",
-        "order": 1,
-        "width": 12,
-        "height": 1,
-        "name": "Wind Data",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 590,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "e8005298fedbec7a",
-        "type": "comment",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "info": "Data is taken from HASS and passed via MQTT\nTopic WeatherData\nChange nodes convert msg.payload object to individual payloads\nPayloads passed to graphs etc",
-        "x": 140,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "5db59bafbced7ccf",
-        "type": "function",
-        "z": "c2f74828919a13f6",
-        "name": "Wind",
-        "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\nvar mywindDir = msg.payload.windDir;\nvar mywindGust = msg.payload.MaxWindGust;\nwindData = \"Speed = \"+ mywindSpeed +\" km/hr \" + \"from \" + mywindDir + \" :  Max gust today of \" + mywindGust + \" km/hr\";\nmsg.payload = windData;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 280,
-        "wires": [
-            [
-                "7ce94d8a54fdeee8"
-            ]
-        ]
-    },
-    {
-        "id": "4397436e0f161712",
-        "type": "function",
-        "z": "c2f74828919a13f6",
-        "name": "Rain",
-        "func": "var rainData = \"\";\nvar myrainToday = msg.payload.rainToday;\nvar myrainMonth = msg.payload.rainMonth;\nvar myrainYear = msg.payload.rainYear;\nrainData = \"Rain today = \"+ myrainToday +\" mm\" + \", Month \" + myrainMonth + \" mm\" + \", Year \" + myrainYear + \" mm\";\nmsg.payload = rainData;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 320,
-        "wires": [
-            [
-                "88054fd6de5e543d",
-                "1ab1137d51733e8f"
-            ]
-        ]
-    },
-    {
-        "id": "1ab1137d51733e8f",
-        "type": "ui_text",
-        "z": "c2f74828919a13f6",
-        "group": "4a982ff0d7f2d5b9",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Rain Data",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 580,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "9d618eee624e25bf",
-        "type": "comment",
-        "z": "04e8c216e556b4f3",
-        "name": "",
-        "info": "Doorbell triggers when pi GPIO xx goes low.\nTurn dooebell led on\nSend mqtt topic \"playTune\" to HASS broker\nESP Home monitors for \"playTune\" topic\nTriggers the playing of tune via DFPPlayer\nESP sends topic \"tunePlayed\" when complete\nTrigger messge to  Google hub\nTrigger display of image of front door",
-        "x": 100,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "c40e5a599c6777dc",
-        "type": "inject",
-        "z": "04e8c216e556b4f3",
-        "name": "ButtonPush",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "FrontDoorBell",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 170,
-        "y": 120,
-        "wires": [
-            [
-                "950a26283cb1aa97"
-            ]
-        ]
-    },
-    {
-        "id": "37de1bb3963af5cb",
-        "type": "mqtt in",
-        "z": "04e8c216e556b4f3",
-        "name": "PlayedTune",
-        "topic": "playedTune",
-        "qos": "1",
-        "datatype": "utf8",
-        "broker": "f00e620a11f9efaa",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 220,
-        "wires": [
-            [
-                "a099e1eff8c0960c"
-            ]
-        ]
-    },
-    {
-        "id": "a099e1eff8c0960c",
-        "type": "debug",
-        "z": "04e8c216e556b4f3",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "db2269f75bf51f6e",
-        "type": "ui_group",
-        "name": "Wind",
-        "tab": "92ce010872de559d",
-        "order": 2,
-        "disp": true,
-        "width": "12",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "8c8b773a157324c5",
-        "type": "mqtt in",
-        "z": "c2f74828919a13f6",
-        "name": "",
-        "topic": "WeatherData",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "f00e620a11f9efaa",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 130,
-        "y": 200,
-        "wires": [
-            [
-                "544599ea1e7f5fa3",
-                "802d41e8482c3e31",
-                "677c6f0ab58f3c69",
-                "d4dc2b6bbe326837",
-                "4aa18319b388a34e",
-                "5db59bafbced7ccf",
-                "4397436e0f161712"
-            ]
-        ]
-    },
-    {
-        "id": "88054fd6de5e543d",
-        "type": "debug",
-        "z": "c2f74828919a13f6",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "950a26283cb1aa97",
-        "type": "mqtt out",
-        "z": "04e8c216e556b4f3",
-        "name": "frontDoor/Button",
-        "topic": "frontDoor/Button",
-        "qos": "1",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f00e620a11f9efaa",
-        "x": 400,
-        "y": 120,
-        "wires": []
     }
 ]
