@@ -51,9 +51,9 @@
         "type": "ui_group",
         "name": "Guages",
         "tab": "92ce010872de559d",
-        "order": 1,
-        "disp": true,
-        "width": 16,
+        "order": 2,
+        "disp": false,
+        "width": "16",
         "collapse": false,
         "className": ""
     },
@@ -63,7 +63,7 @@
         "name": "Weather",
         "icon": "dashboard",
         "disabled": false,
-        "hidden": false
+        "hidden": true
     },
     {
         "id": "349c87ac52becf82",
@@ -79,7 +79,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#15e1e5",
+                "baseColor": "#eef056",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -93,11 +93,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#097479",
-                    "value": "#15e1e5",
+                    "value": "#eef056",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#15e1e5",
+                    "value": "#eef056",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -109,7 +109,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#57edf0",
+                    "value": "#f5f69c",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -125,7 +125,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#15e1e5",
+                    "value": "#eef056",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -146,18 +146,18 @@
         },
         "site": {
             "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
+            "hideToolbar": "true",
             "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
+                "sx": 45,
+                "sy": 45,
+                "gx": 5,
+                "gy": 5,
+                "cx": 5,
+                "cy": 5,
                 "px": 0,
                 "py": 0
             }
@@ -168,9 +168,9 @@
         "type": "ui_group",
         "name": "Wind",
         "tab": "92ce010872de559d",
-        "order": 2,
-        "disp": true,
-        "width": "12",
+        "order": 3,
+        "disp": false,
+        "width": "16",
         "collapse": false,
         "className": ""
     },
@@ -179,11 +179,52 @@
         "type": "ui_group",
         "name": "Rainfall",
         "tab": "92ce010872de559d",
-        "order": 3,
-        "disp": true,
-        "width": "12",
+        "order": 4,
+        "disp": false,
+        "width": "16",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "675036dd.603328",
+        "type": "ui_group",
+        "name": "Frame Grab",
+        "tab": "7af2d9c8.0a9148",
+        "order": 1,
+        "disp": false,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7af2d9c8.0a9148",
+        "type": "ui_tab",
+        "name": "RTSP",
+        "icon": "dashboard",
+        "order": 13,
+        "disabled": false,
+        "hidden": true
+    },
+    {
+        "id": "01157d536030d5db",
+        "type": "ui_group",
+        "name": "Clock",
+        "tab": "92ce010872de559d",
+        "order": 1,
+        "disp": false,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e93c3141d4a25013",
+        "type": "ui_spacer",
+        "z": "04e8c216e556b4f3",
+        "name": "spacer",
+        "group": "db2269f75bf51f6e",
+        "order": 2,
+        "width": 8,
+        "height": 1
     },
     {
         "id": "544599ea1e7f5fa3",
@@ -223,8 +264,8 @@
         "topic": "DataOK",
         "payload": "Data OK",
         "payloadType": "str",
-        "x": 170,
-        "y": 460,
+        "x": 610,
+        "y": 40,
         "wires": [
             [
                 "1e3fcd6f82cc6490"
@@ -254,7 +295,8 @@
                 "d4dc2b6bbe326837",
                 "4aa18319b388a34e",
                 "5db59bafbced7ccf",
-                "4397436e0f161712"
+                "4397436e0f161712",
+                "5de87a7c2e7f9207"
             ]
         ]
     },
@@ -272,8 +314,8 @@
         "correl": "",
         "expiry": "",
         "broker": "f00e620a11f9efaa",
-        "x": 400,
-        "y": 460,
+        "x": 780,
+        "y": 40,
         "wires": []
     },
     {
@@ -501,8 +543,8 @@
         "type": "ui_text",
         "z": "c2f74828919a13f6",
         "group": "db2269f75bf51f6e",
-        "order": 1,
-        "width": 12,
+        "order": 3,
+        "width": 8,
         "height": 1,
         "name": "Wind Data",
         "label": "",
@@ -523,8 +565,8 @@
         "z": "c2f74828919a13f6",
         "name": "",
         "info": "Data is taken from HASS and passed via MQTT\nTopic WeatherData\nChange nodes convert msg.payload object to individual payloads\nPayloads passed to graphs etc",
-        "x": 140,
-        "y": 60,
+        "x": 100,
+        "y": 20,
         "wires": []
     },
     {
@@ -539,8 +581,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 380,
+        "x": 580,
+        "y": 400,
         "wires": []
     },
     {
@@ -548,7 +590,7 @@
         "type": "function",
         "z": "c2f74828919a13f6",
         "name": "Wind",
-        "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\nvar mywindDir = msg.payload.windDir;\nvar mywindGust = msg.payload.MaxWindGust;\nwindData = \"Speed = \"+ mywindSpeed +\" km/hr \" + \"from \" + mywindDir + \" :  Max gust today of \" + mywindGust + \" km/hr\";\nmsg.payload = windData;\nreturn msg;",
+        "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\nvar mywindDir = msg.payload.windDir;\nvar mywindGust = msg.payload.MaxWindGust;\nwindData = \" From \" + mywindDir + \" :  Max gust today of \" + mywindGust + \" km/hr\";\nmsg.payload = windData;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -576,7 +618,7 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "88054fd6de5e543d",
@@ -602,8 +644,114 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 580,
-        "y": 320,
+        "y": 360,
         "wires": []
+    },
+    {
+        "id": "5de87a7c2e7f9207",
+        "type": "function",
+        "z": "c2f74828919a13f6",
+        "name": "Wind",
+        "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\n//var mywindDir = msg.payload.windDir;\n//var mywindGust = msg.payload.MaxWindGust;\n//windData = \"Speed = \"+ mywindSpeed +\" km/hr \" + \"from \" + mywindDir + \" :  Max gust today of \" + mywindGust + \" km/hr\";\nmsg.payload = mywindSpeed;\nmsg.topic = \"km/hr\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 320,
+        "wires": [
+            [
+                "6f8a628231034fdf"
+            ]
+        ]
+    },
+    {
+        "id": "6f8a628231034fdf",
+        "type": "ui_chart",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "db2269f75bf51f6e",
+        "order": 1,
+        "width": 8,
+        "height": 2,
+        "label": "",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d624d0",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0b94e35134ecc9b",
+        "type": "ui_digital_clock",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "group": "01157d536030d5db",
+        "order": 1,
+        "width": 16,
+        "height": 1,
+        "x": 310,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "01dcbde1e793980f",
+        "type": "inject",
+        "z": "c2f74828919a13f6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "f0b94e35134ecc9b"
+            ]
+        ]
     },
     {
         "id": "9d618eee624e25bf",
@@ -611,8 +759,8 @@
         "z": "04e8c216e556b4f3",
         "name": "",
         "info": "Doorbell triggers when pi GPIO xx goes low.\nTurn dooebell led on\nSend mqtt topic \"playTune\" to HASS broker\nESP Home monitors for \"playTune\" topic\nTriggers the playing of tune via DFPPlayer\nESP sends topic \"tunePlayed\" when complete\nTrigger messge to  Google hub\nTrigger display of image of front door",
-        "x": 100,
-        "y": 40,
+        "x": 80,
+        "y": 20,
         "wires": []
     },
     {
@@ -620,7 +768,7 @@
         "type": "mqtt out",
         "z": "04e8c216e556b4f3",
         "name": "frontDoor/Button",
-        "topic": "frontDoor/Button",
+        "topic": "Doorbell/Pushed",
         "qos": "1",
         "retain": "",
         "respTopic": "",
@@ -629,8 +777,8 @@
         "correl": "",
         "expiry": "",
         "broker": "f00e620a11f9efaa",
-        "x": 400,
-        "y": 120,
+        "x": 380,
+        "y": 40,
         "wires": []
     },
     {
@@ -651,14 +799,16 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "FrontDoorBell",
+        "topic": "Doorbell/Pushed",
         "payload": "1",
         "payloadType": "num",
-        "x": 170,
-        "y": 120,
+        "x": 130,
+        "y": 80,
         "wires": [
             [
-                "950a26283cb1aa97"
+                "950a26283cb1aa97",
+                "4e93ccd8b9abb139",
+                "b725302f0e51a027"
             ]
         ]
     },
@@ -675,8 +825,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 220,
+        "x": 630,
+        "y": 40,
         "wires": [
             [
                 "a099e1eff8c0960c"
@@ -695,8 +845,268 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 220,
+        "x": 800,
+        "y": 40,
         "wires": []
+    },
+    {
+        "id": "aace40ba7b3be77e",
+        "type": "exec",
+        "z": "04e8c216e556b4f3",
+        "command": "ffmpeg -y -i rtsp://mike:be1DonFD@10.10.0.33:554/videoMain -vframes 1 -f image2pipe -vcodec png -",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Grab a frame->stdout",
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "5fbf17a782b06789"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b2eec0b757afef59",
+        "type": "comment",
+        "z": "04e8c216e556b4f3",
+        "name": "Frame grabber",
+        "info": "This section of the flow is responsible for \ngrabbing a single out of the RTSP feed of the IP\nCamera. It uses avconv to do that which is part\nof the libav-tools for raspberry pi.\n\nThe trigger can be an inject, or a UI button.\nThe statistic node keeps a track of the number of\ngrabbed frames and the success rate (when the\nvideo conversion/grabbing was successful). The \nStatistic node also has a reset input which can \nbe used to periodically reset the stats (e.g.\ndaily, weekly).\n\nI directed the second output of the Exec node to\na file, as the output of the avconv is usually \nquite long and if there are errors you don't\nsee the entire output in the debug window, so in\nthat case just open to output and see what the issue\nis.",
+        "x": 100,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4bc5dabc6de7ea2e",
+        "type": "template",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"720px\" height=\"480px\" src=\"data:image/jpg;base64,{{{payload}}}\">",
+        "output": "str",
+        "x": 640,
+        "y": 200,
+        "wires": [
+            [
+                "09165c5d9e6bf1e4"
+            ]
+        ]
+    },
+    {
+        "id": "5fbf17a782b06789",
+        "type": "base64",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 780,
+        "y": 120,
+        "wires": [
+            [
+                "4bc5dabc6de7ea2e"
+            ]
+        ]
+    },
+    {
+        "id": "09165c5d9e6bf1e4",
+        "type": "ui_template",
+        "z": "04e8c216e556b4f3",
+        "group": "675036dd.603328",
+        "name": "",
+        "order": 1,
+        "width": "14",
+        "height": "10",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 800,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e93ccd8b9abb139",
+        "type": "looptimer-advanced",
+        "z": "04e8c216e556b4f3",
+        "duration": "2",
+        "units": "Second",
+        "maxloops": "60",
+        "maxtimeout": "121",
+        "maxtimeoutunits": "Second",
+        "name": "",
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "aace40ba7b3be77e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "02d3a53ee775e697",
+        "type": "ui_ui_control",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "events": "all",
+        "x": 400,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ed1f6581c681e5b",
+        "type": "change",
+        "z": "04e8c216e556b4f3",
+        "name": "Weather Tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"Weather\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "02d3a53ee775e697"
+            ]
+        ]
+    },
+    {
+        "id": "b725302f0e51a027",
+        "type": "change",
+        "z": "04e8c216e556b4f3",
+        "name": "RTSP Tab",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tab\":\"RTSP\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "02d3a53ee775e697",
+                "6eddf771e9a8a7cb"
+            ]
+        ]
+    },
+    {
+        "id": "6eddf771e9a8a7cb",
+        "type": "delay",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "122",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "3ed1f6581c681e5b"
+            ]
+        ]
+    },
+    {
+        "id": "dcfa632c6d334725",
+        "type": "inject",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"tab\":\"Weather\"}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "b0311242a3741ee7"
+            ]
+        ]
+    },
+    {
+        "id": "0c7de497e7efe2c9",
+        "type": "inject",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"tab\":\"RTSP\"}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "b0311242a3741ee7"
+            ]
+        ]
+    },
+    {
+        "id": "b0311242a3741ee7",
+        "type": "ui_ui_control",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "events": "all",
+        "x": 320,
+        "y": 420,
+        "wires": [
+            []
+        ]
     }
 ]
