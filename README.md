@@ -1,7 +1,11 @@
 Front_Door-v2
 =============
 
+<<<<<<< HEAD
 Pi doorbell and weather data display from HA
+=======
+Pi doorbell and weather data display from HASS
+>>>>>>> d68d053036e3eb1f4d30673d492f77b725dbaf33
 
 ### About
 
