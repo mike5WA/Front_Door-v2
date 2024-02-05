@@ -164,57 +164,15 @@
         }
     },
     {
-        "id": "db2269f75bf51f6e",
-        "type": "ui_group",
-        "name": "Wind",
-        "tab": "92ce010872de559d",
-        "order": 3,
-        "disp": true,
-        "width": "16",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "4a982ff0d7f2d5b9",
         "type": "ui_group",
         "name": "Rainfall",
         "tab": "92ce010872de559d",
-        "order": 4,
+        "order": 5,
         "disp": true,
         "width": "16",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "9bf8e44cdbf59cae",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "10,10,0,5",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "autoUnsubscribe": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthRetain": "false",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closeRetain": "false",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willRetain": "false",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
     },
     {
         "id": "15db134b92603311",
@@ -226,6 +184,27 @@
         "width": "16",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "d5903a44725a5962",
+        "type": "ui_group",
+        "name": "Wind",
+        "tab": "92ce010872de559d",
+        "order": 4,
+        "disp": false,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cc48e8cbc7d7765d",
+        "type": "ui_spacer",
+        "z": "c2f74828919a13f6",
+        "name": "spacer",
+        "group": "d5903a44725a5962",
+        "order": 2,
+        "width": 8,
+        "height": 1
     },
     {
         "id": "544599ea1e7f5fa3",
@@ -240,7 +219,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 160,
+        "x": 120,
         "y": 280,
         "wires": []
     },
@@ -407,7 +386,7 @@
         "group": "9ae652e11f50b5d1",
         "order": 1,
         "width": 4,
-        "height": "3",
+        "height": 3,
         "gtype": "gage",
         "title": "Temp",
         "label": "C",
@@ -435,7 +414,7 @@
         "group": "9ae652e11f50b5d1",
         "order": 2,
         "width": 4,
-        "height": "3",
+        "height": 3,
         "gtype": "gage",
         "title": "Hpa",
         "label": "Hpa",
@@ -463,7 +442,7 @@
         "group": "9ae652e11f50b5d1",
         "order": 3,
         "width": 4,
-        "height": "3",
+        "height": 3,
         "gtype": "gage",
         "title": "Humidity",
         "label": "%",
@@ -491,7 +470,7 @@
         "group": "9ae652e11f50b5d1",
         "order": 4,
         "width": 4,
-        "height": "3",
+        "height": 3,
         "gtype": "gage",
         "title": "UV",
         "label": "",
@@ -515,10 +494,10 @@
         "id": "7ce94d8a54fdeee8",
         "type": "ui_text",
         "z": "c2f74828919a13f6",
-        "group": "db2269f75bf51f6e",
-        "order": 1,
-        "width": "0",
-        "height": "0",
+        "group": "d5903a44725a5962",
+        "order": 3,
+        "width": 8,
+        "height": 1,
         "name": "Wind Data",
         "label": "",
         "format": "{{msg.payload}}",
@@ -543,22 +522,6 @@
         "wires": []
     },
     {
-        "id": "88054fd6de5e543d",
-        "type": "debug",
-        "z": "c2f74828919a13f6",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "5db59bafbced7ccf",
         "type": "function",
         "z": "c2f74828919a13f6",
@@ -570,12 +533,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 370,
-        "y": 280,
+        "x": 90,
+        "y": 400,
         "wires": [
-            [
-                "7ce94d8a54fdeee8"
-            ]
+            []
         ]
     },
     {
@@ -591,10 +552,9 @@
         "finalize": "",
         "libs": [],
         "x": 370,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
-                "88054fd6de5e543d",
                 "1ab1137d51733e8f"
             ]
         ]
@@ -617,7 +577,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 580,
-        "y": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -641,9 +601,10 @@
                 "677c6f0ab58f3c69",
                 "d4dc2b6bbe326837",
                 "4aa18319b388a34e",
-                "5db59bafbced7ccf",
                 "4397436e0f161712",
-                "544599ea1e7f5fa3"
+                "544599ea1e7f5fa3",
+                "44d596a65794323d",
+                "cea996d900060e68"
             ]
         ]
     },
@@ -653,7 +614,7 @@
         "z": "c2f74828919a13f6",
         "name": "",
         "group": "15db134b92603311",
-        "order": 4,
+        "order": 1,
         "width": 0,
         "height": 0,
         "x": 590,
@@ -690,31 +651,97 @@
         ]
     },
     {
+        "id": "cea996d900060e68",
+        "type": "function",
+        "z": "c2f74828919a13f6",
+        "name": "WindSpeed",
+        "func": "var windData = \"\";\nvar mywindSpeed = msg.payload.windSpeed;\n//var mywindDir = msg.payload.windDir;\n//var mywindGust = msg.payload.MaxWindGust;\n//windData = \"Current Speed = \"+ mywindSpeed +\" km/hr \" + \"from \" + mywindDir + \"  :  Maximum gust today of  \" + mywindGust + \" km/hr\";\nmsg.payload = mywindSpeed;\nmsg.topic = \"km/hr\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "e76436bf36c3306a"
+            ]
+        ]
+    },
+    {
+        "id": "44d596a65794323d",
+        "type": "function",
+        "z": "c2f74828919a13f6",
+        "name": "Wind",
+        "func": "var windData = \"\";\n//var mywindSpeed = msg.payload.windSpeed;\nvar mywindDir = msg.payload.windDir;\nvar mywindGust = msg.payload.MaxWindGust;\nwindData = \"\" + mywindDir + \"  :  Max today  \" + mywindGust + \" km/hr\";\nmsg.payload = windData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "7ce94d8a54fdeee8"
+            ]
+        ]
+    },
+    {
+        "id": "e76436bf36c3306a",
+        "type": "ui_chart",
+        "z": "c2f74828919a13f6",
+        "name": "Km/hr",
+        "group": "d5903a44725a5962",
+        "order": 1,
+        "width": 8,
+        "height": 2,
+        "label": "",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#b544d5",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "9d618eee624e25bf",
         "type": "comment",
         "z": "04e8c216e556b4f3",
         "name": "",
-        "info": "Doorbell triggers when pi GPIO xx goes low.\nTurn dooebell led on\nSend mqtt topic \"playTune\" to HASS broker\nESP Home monitors for \"playTune\" topic\nTriggers the playing of tune via DFPPlayer\nESP sends topic \"tunePlayed\" when complete\nTrigger messge to  Google hub\nTrigger display of image of front door",
+        "info": "Doorbell triggers when pi GPIO xx goes low.\nTurn dooebell led on\nSend mqtt topic \"Doorbell/Pushed\" to HASS broker\nHASS mqtt monitors and sends \"PlayTune\"\nESP Home Doorbells 1 & 2 monitor for \"PlayTune\nTriggers the playing of tune via DFPPlayer\nESP sends topic \"tunePlayed\" when complete\nTrigger messge to  Google hub\nTrigger display of image of front door",
         "x": 100,
         "y": 40,
-        "wires": []
-    },
-    {
-        "id": "950a26283cb1aa97",
-        "type": "mqtt out",
-        "z": "04e8c216e556b4f3",
-        "name": "frontDoor/Button",
-        "topic": "frontDoor/Button",
-        "qos": "1",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "f00e620a11f9efaa",
-        "x": 400,
-        "y": 120,
         "wires": []
     },
     {
@@ -735,14 +762,15 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "FrontDoorBell",
-        "payload": "1",
-        "payloadType": "num",
+        "topic": "Doorbell/Pushed",
+        "payload": "PlayTune",
+        "payloadType": "str",
         "x": 170,
         "y": 120,
         "wires": [
             [
-                "950a26283cb1aa97"
+                "bc3b808b734f1a80",
+                "50b557829936ab9a"
             ]
         ]
     },
@@ -759,8 +787,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 150,
-        "y": 220,
+        "x": 170,
+        "y": 180,
         "wires": [
             [
                 "a099e1eff8c0960c"
@@ -772,15 +800,50 @@
         "type": "debug",
         "z": "04e8c216e556b4f3",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
+        "x": 380,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bc3b808b734f1a80",
+        "type": "debug",
+        "z": "04e8c216e556b4f3",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 360,
-        "y": 220,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "50b557829936ab9a",
+        "type": "mqtt out",
+        "z": "04e8c216e556b4f3",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f00e620a11f9efaa",
+        "x": 410,
+        "y": 120,
         "wires": []
     }
 ]
